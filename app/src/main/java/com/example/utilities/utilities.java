@@ -1,7 +1,5 @@
 package com.example.utilities;
 
-package com.example.loginsignupapp;
-
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;

@@ -3,8 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/User1/AndroidStudioProjects/utilities/app/src/main/res/layout/activity_add_health_status.xml" value="0.1" />
+        <entry key="..\:/Users/User1/AndroidStudioProjects/utilities/app/src/main/res/layout/activity_add_health_status.xml" value="0.18" />
         <entry key="..\:/Users/User1/AndroidStudioProjects/utilities/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/User1/AndroidStudioProjects/utilities/app/src/main/res/layout/activity_signup.xml" value="0.25" />
       </map>
     </option>
   </component>

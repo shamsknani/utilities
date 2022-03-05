@@ -6,20 +6,18 @@ enum Hhcategory {
 public class Hhcategories {
     private int weight;
     private int height;
-    private int age;
-    private int goal;
+    private String date;
+    private String birthdate;
+    private String name;
+    private Hhcategory Category;
 
-    public Hhcategories() {
-
-    }
-    @Override
-    public String toString() {
-        return "Hhcategories{" +
-                "weight=" + weight +
-                ", height=" + height +
-                ", age=" + age +
-                ", goal=" + goal +
-                '}';
+    public Hhcategories(int weight, int height, String date, String birthdate, String name, Hhcategory category) {
+        this.weight = weight;
+        this.height = height;
+        this.date = date;
+        this.birthdate = birthdate;
+        this.name = name;
+        Category = category;
     }
 
     public int getWeight() {
@@ -38,26 +36,47 @@ public class Hhcategories {
         this.height = height;
     }
 
-    public int getAge() {
-        return age;
+    public String getDate() {
+        return date;
     }
 
-    public void setAge(int age) {
-        this.age = age;
+    public void setDate(String date) {
+        this.date = date;
     }
 
-    public int getGoal() {
-        return goal;
+    public String getBirthdate() {
+        return birthdate;
     }
 
-    public void setGoal(int goal) {
-        this.goal = goal;
+    public void setBirthdate(String birthdate) {
+        this.birthdate = birthdate;
     }
 
-    public Hhcategories(int weight, int height, int age, int goal) {
-        this.weight = weight;
-        this.height = height;
-        this.age = age;
-        this.goal = goal;
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Hhcategory getCategory() {
+        return Category;
+    }
+
+    public void setCategory(Hhcategory category) {
+        Category = category;
+    }
+
+    @Override
+    public String toString() {
+        return "Hhcategories{" +
+                "weight=" + weight +
+                ", height=" + height +
+                ", date='" + date + '\'' +
+                ", birthdate='" + birthdate + '\'' +
+                ", name='" + name + '\'' +
+                ", Category=" + Category +
+                '}';
     }
 }

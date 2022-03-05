@@ -4,6 +4,93 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#0803A9F4"
+    android:backgroundTint="#009688"
+    android:foregroundTint="#009688"
     tools:context=".AddHealthStatus">
+
+    <EditText
+        android:id="@+id/etNameAddHealthStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#009688"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="117dp" />
+
+    <Spinner
+        android:id="@+id/spCatAddHealthStatus"
+        android:layout_width="199dp"
+        android:layout_height="52dp"
+        android:backgroundTint="#009688"
+        android:foregroundTint="#009688"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="520dp" />
+
+    <EditText
+        android:id="@+id/etheightAddHealthStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#009688"
+        android:ems="10"
+        android:foregroundTint="#009688"
+        android:foregroundTintMode="add"
+        android:hint="Height"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="295dp" />
+
+    <EditText
+        android:id="@+id/etageAddHealthStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#009688"
+        android:ems="10"
+        android:hint="birthdate"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="221dp" />
+
+    <ImageView
+        android:id="@+id/ivPhotoAddHealthStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="267dp"
+        tools:layout_editor_absoluteY="76dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/etweightAddHealthStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#009688"
+        android:ems="10"
+        android:hint="weight"
+        android:inputType="number"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="359dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#009688"
+        android:onClick="add"
+        android:text="ADD"
+        tools:layout_editor_absoluteX="152dp"
+        tools:layout_editor_absoluteY="617dp" />
+
+    <EditText
+        android:id="@+id/etdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#009688"
+        android:ems="10"
+        android:hint="date"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="95dp"
+        tools:layout_editor_absoluteY="436dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

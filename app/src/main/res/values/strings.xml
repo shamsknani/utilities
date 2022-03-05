@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">utilities</string>
+    <string name="err_fields_empty">Some fields are empty!</string>
+
 </resources>
