@@ -7,40 +7,67 @@
     android:foregroundTint="#009688"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/etusernameMain"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="110dp" />
+    <Button
+        android:id="@+id/button"
+        android:layout_width="91dp"
+        android:layout_height="86dp"
+        android:layout_marginStart="148dp"
+        android:layout_marginBottom="9dp"
+        android:backgroundTint="#009688"
+        android:onClick="login"
+        android:text="Log In"
+        app:layout_constraintBottom_toTopOf="@+id/btnsignupMain"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordMain"
+        app:layout_constraintVertical_bias="0.611" />
 
     <EditText
         android:id="@+id/etPasswordMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="28dp"
         android:ems="10"
         android:inputType="textPassword"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="201dp" />
+        app:layout_constraintBottom_toTopOf="@+id/gotoadd"
+        app:layout_constraintEnd_toEndOf="@+id/etusernameMain"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="112dp"
-        android:layout_height="72dp"
-        android:layout_marginStart="149dp"
-        android:backgroundTint="#009688"
-        android:text="Log In"
+        android:id="@+id/gotoadd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginBottom="272dp"
+        android:text="add health status"
+        android:onClick="gotoaddhealthstatus"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etusernameMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:layout_marginBottom="46dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/etPasswordMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="273dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.441" />
 
     <Button
         android:id="@+id/btnsignupMain"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="54dp"
         android:backgroundTint="#009688"
+        android:onClick="signup"
         android:text="SIGN UP"
-        tools:layout_editor_absoluteX="158dp"
-        tools:layout_editor_absoluteY="354dp" />
+        app:layout_constraintBottom_toTopOf="@+id/gotoadd"
+        app:layout_constraintStart_toStartOf="@+id/button" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

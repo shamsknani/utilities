@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Utilities">
         <activity
+            android:name=".WaterIntake"
+            android:exported="true" />
+        <activity
+            android:name=".HeartRate"
+            android:exported="true" />
+        <activity
             android:name=".SignupActivity"
             android:exported="true" />
         <activity

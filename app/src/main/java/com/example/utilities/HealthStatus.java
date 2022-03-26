@@ -3,7 +3,7 @@ enum Hhcategory {
     Heartrate, water, calorieintake, steps, sleep
 
 }
-public class Hhcategories {
+public class HealthStatus {
     private int weight;
     private int height;
     private String date;
@@ -11,7 +11,7 @@ public class Hhcategories {
     private String name;
     private Hhcategory Category;
 
-    public Hhcategories(int weight, int height, String date, String birthdate, String name, Hhcategory category) {
+    public HealthStatus(int weight, int height, String date, String birthdate, String name, Hhcategory category) {
         this.weight = weight;
         this.height = height;
         this.date = date;

@@ -13,84 +13,110 @@
         android:id="@+id/etNameAddHealthStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
         android:backgroundTint="#009688"
         android:ems="10"
         android:hint="Name"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="117dp" />
+        app:layout_constraintStart_toStartOf="@+id/etageAddHealthStatus"
+        app:layout_constraintTop_toBottomOf="@+id/ivPhotoAddHealthStatus" />
 
     <Spinner
         android:id="@+id/spCatAddHealthStatus"
         android:layout_width="199dp"
         android:layout_height="52dp"
+        android:layout_marginTop="161dp"
+        android:layout_marginBottom="159dp"
         android:backgroundTint="#009688"
         android:foregroundTint="#009688"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="520dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/etdate"
+        app:layout_constraintTop_toTopOf="@+id/etweightAddHealthStatus"
+        app:layout_constraintVertical_bias="0.025" />
 
     <EditText
         android:id="@+id/etheightAddHealthStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="28dp"
         android:backgroundTint="#009688"
         android:ems="10"
         android:foregroundTint="#009688"
         android:foregroundTintMode="add"
         android:hint="Height"
         android:inputType="number"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="295dp" />
+        app:layout_constraintStart_toStartOf="@+id/etageAddHealthStatus"
+        app:layout_constraintTop_toBottomOf="@+id/etageAddHealthStatus" />
 
     <EditText
         android:id="@+id/etageAddHealthStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="88dp"
         android:backgroundTint="#009688"
         android:ems="10"
         android:hint="birthdate"
         android:inputType="number"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="221dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivPhotoAddHealthStatus" />
 
     <ImageView
         android:id="@+id/ivPhotoAddHealthStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="267dp"
-        tools:layout_editor_absoluteY="76dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="152dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
     <EditText
         android:id="@+id/etweightAddHealthStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
         android:backgroundTint="#009688"
         android:ems="10"
         android:hint="weight"
         android:inputType="number"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="359dp" />
+        app:layout_constraintStart_toStartOf="@+id/etheightAddHealthStatus"
+        app:layout_constraintTop_toBottomOf="@+id/etheightAddHealthStatus" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="124dp"
         android:backgroundTint="#009688"
         android:onClick="add"
         android:text="ADD"
-        tools:layout_editor_absoluteX="152dp"
-        tools:layout_editor_absoluteY="617dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.465"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/etdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
         android:backgroundTint="#009688"
         android:ems="10"
         android:hint="date"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="95dp"
-        tools:layout_editor_absoluteY="436dp" />
+        app:layout_constraintStart_toStartOf="@+id/etweightAddHealthStatus"
+        app:layout_constraintTop_toBottomOf="@+id/etweightAddHealthStatus" />
+
+    <Button
+        android:id="@+id/trywater"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="gotowater"
+        android:text="water"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintStart_toStartOf="@+id/button2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

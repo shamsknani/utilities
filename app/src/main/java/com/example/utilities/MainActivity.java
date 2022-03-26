@@ -3,6 +3,7 @@ package com.example.utilities;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -59,4 +60,15 @@ public class MainActivity<auth> extends AppCompatActivity {
                         }
                     }
                 });
-    }}
+    }
+
+    public void signup(View view) {
+        Intent i = new Intent(this,SignupActivity.class);
+        startActivity(i);
+    }
+
+    public void gotoaddhealthstatus(View view) {
+        Intent i = new Intent(this,AddHealthStatus.class);
+        startActivity(i);
+    }
+}

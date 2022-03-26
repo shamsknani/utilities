@@ -80,7 +80,7 @@ public class AddHealthStatus extends AppCompatActivity {
             return;
         }
 
-        Hhcategories HealthStatus = new Hhcategories(Integer.parseInt(weight), Integer.parseInt(height), birthdate, date, name, Hhcategory.valueOf(category));
+        HealthStatus HealthStatus = new HealthStatus(Integer.parseInt(weight), Integer.parseInt(height), birthdate, date, name, Hhcategory.valueOf(category));
         fbs.getFirestore().collection("HealthStatuses")
                 .add(HealthStatus)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
@@ -195,5 +195,10 @@ public class AddHealthStatus extends AppCompatActivity {
                                 }
                             });
         }
+    }
+
+    public void gotowater(View view) {
+        Intent i = new Intent(this,HeartRate.class);
+        startActivity(i);
     }
 }
