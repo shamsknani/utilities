@@ -4,10 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/User1/AndroidStudioProjects/utilities/app/src/main/res/drawable/circle.xml" value="0.2203125" />
-        <entry key="..\:/Users/User1/AndroidStudioProjects/utilities/app/src/main/res/layout/activity_add_health_status.xml" value="0.1" />
+        <entry key="..\:/Users/User1/AndroidStudioProjects/utilities/app/src/main/res/layout/activity_add_health_status.xml" value="0.25" />
+        <entry key="..\:/Users/User1/AndroidStudioProjects/utilities/app/src/main/res/layout/activity_all.xml" value="0.25" />
         <entry key="..\:/Users/User1/AndroidStudioProjects/utilities/app/src/main/res/layout/activity_heart_rate.xml" value="0.20416666666666666" />
-        <entry key="..\:/Users/User1/AndroidStudioProjects/utilities/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/User1/AndroidStudioProjects/utilities/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/User1/AndroidStudioProjects/utilities/app/src/main/res/layout/activity_signup.xml" value="0.25" />
+        <entry key="..\:/Users/User1/AndroidStudioProjects/utilities/app/src/main/res/layout/activity_steps.xml" value="0.17192982456140352" />
         <entry key="..\:/Users/User1/AndroidStudioProjects/utilities/app/src/main/res/layout/activity_water_intake.xml" value="0.25" />
       </map>
     </option>

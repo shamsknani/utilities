@@ -201,4 +201,8 @@ public class AddHealthStatus extends AppCompatActivity {
         Intent i = new Intent(this,HeartRate.class);
         startActivity(i);
     }
+    public void gotoSteps(View view) {
+        Intent i = new Intent(this,Steps.class);
+        startActivity(i);
+    }
 }

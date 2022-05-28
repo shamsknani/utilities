@@ -7,6 +7,22 @@
     android:foregroundTint="#009688"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="134dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="774dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="HEARTS"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:backgroundTint="#009688"
+        tools:inputType="textUri" />
+
     <Button
         android:id="@+id/button"
         android:layout_width="91dp"
@@ -26,12 +42,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="4dp"
-        android:layout_marginBottom="28dp"
+        android:layout_marginBottom="648dp"
         android:ems="10"
+        android:hint="password"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/gotoadd"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/etusernameMain"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView4"
+        tools:textColorHint="#040404" />
 
     <Button
         android:id="@+id/gotoadd"
@@ -39,8 +57,10 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="96dp"
         android:layout_marginBottom="272dp"
-        android:text="add health status"
+        android:backgroundTint="#009688"
         android:onClick="gotoaddhealthstatus"
+        android:text="add health status"
+        app:iconTint="#009688"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -51,13 +71,15 @@
         android:layout_marginTop="110dp"
         android:layout_marginBottom="46dp"
         android:ems="10"
+        android:hint="username"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toTopOf="@+id/etPasswordMain"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.439"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.441" />
+        app:layout_constraintVertical_bias="0.441"
+        tools:textColorHint="#090909" />
 
     <Button
         android:id="@+id/btnsignupMain"
@@ -69,5 +91,33 @@
         android:text="SIGN UP"
         app:layout_constraintBottom_toTopOf="@+id/gotoadd"
         app:layout_constraintStart_toStartOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="18dp"
+        android:text="HEALTHY"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView3"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintEnd_toStartOf="@+id/imageView4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginBottom="57dp"
+        app:layout_constraintBottom_toTopOf="@+id/etPasswordMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/hh" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

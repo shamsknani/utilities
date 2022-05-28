@@ -79,12 +79,13 @@ public class SignupActivity extends AppCompatActivity {
 
 
         // TODO: 3- Check username and password with Firebase Authentication
-        auth.signInWithEmailAndPassword(username, password)
+        auth.createUserWithEmailAndPassword(username, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // TODO: commands if successful
+                            //
+                            // TODO: new User object, add to firebase
                         } else {
 
 
