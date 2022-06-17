@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:backgroundTint="#F8FAFA"
+    tools:background="#F8F5DF"
+    tools:context=".AllActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="181dp"
+        android:layout_height="156dp"
+        android:layout_marginStart="62dp"
+        android:layout_marginEnd="62dp"
+        android:layout_marginBottom="154dp"
+        android:scrollbarSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/quote" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="336dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="172dp"
+        android:layout_marginEnd="16dp"
+        android:fontFamily="sans-serif-black"
+        android:includeFontPadding="false"
+        android:text="what would you like to check?"
+        android:textAlignment="center"
+        android:textColor="#009688"
+        app:layout_constraintBottom_toTopOf="@+id/button6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:textSize="30sp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="115dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="11dp"
+        android:backgroundTint="#00D4D4"
+        android:onClick="gotowater"
+        android:text="water"
+        app:layout_constraintBottom_toTopOf="@+id/button7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button6" />
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="110dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="17dp"
+        android:backgroundTint="#009688"
+        android:foregroundTint="#009688"
+        android:onClick="gotoSteps"
+        android:text="steps"
+        app:iconTint="#201E1E"
+        app:layout_constraintBottom_toTopOf="@+id/button5"
+        app:layout_constraintEnd_toEndOf="@+id/textView9"
+        app:layout_constraintStart_toStartOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="142dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="348dp"
+        android:backgroundTint="#03A9F4"
+        android:onClick="gotoHeartrate"
+        android:text="heartrate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button5" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

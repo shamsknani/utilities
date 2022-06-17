@@ -10,26 +10,32 @@
     android:outlineProvider="paddedBounds"
     tools:context=".WaterIntake">
 
-    <ImageView
-        android:id="@+id/imageView2"
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
         android:layout_width="0dp"
-        android:layout_height="454dp"
-        android:layout_marginStart="70dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginBottom="412dp"
-        android:foregroundTint="#009688"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:hint="enter amount of water you drank so far (ml)"
+        android:inputType="textPersonName"
+        android:textColorHighlight="#009688"
+        android:textColorHint="#009688"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/glass" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
         style="@style/Widget.AppCompat.AutoCompleteTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="23dp"
-        android:layout_marginTop="43dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="13dp"
         android:drawableTint="#009688"
         android:ems="10"
         android:foregroundTint="#009688"
@@ -44,8 +50,36 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textDirection="firstStrong"
         android:textStyle="normal|bold|italic"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Water Intake" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="170dp"
+        android:foregroundTint="#009688"
+        app:layout_constraintBottom_toTopOf="@+id/buttonwater"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName2"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
+        app:srcCompat="@drawable/water" />
+
+    <Button
+        android:id="@+id/buttonwater"
+        android:layout_width="72dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="143dp"
+        android:backgroundTint="#1D97A6"
+        android:onClick="checkwater"
+        android:text="go"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

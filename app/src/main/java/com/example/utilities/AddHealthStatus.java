@@ -196,13 +196,7 @@ public class AddHealthStatus extends AppCompatActivity {
                             });
         }
     }
-
-    public void gotowater(View view) {
-        Intent i = new Intent(this,HeartRate.class);
-        startActivity(i);
-    }
-    public void gotoSteps(View view) {
-        Intent i = new Intent(this,Steps.class);
+    public void gotoall(View view) {  Intent i = new Intent(this,AllActivity.class);
         startActivity(i);
     }
 }
