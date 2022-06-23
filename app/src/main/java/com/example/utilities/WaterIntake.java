@@ -20,7 +20,7 @@ public class WaterIntake extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_water_intake);
-        EditText editTextTextPersonName2 = findViewById(R.id.editTextTextPersonName2);
+        editTextTextPersonName2 = findViewById(R.id.editTextTextPersonName2);
     }
 
     public void checkwater(View view) {
@@ -39,7 +39,7 @@ public class WaterIntake extends AppCompatActivity {
                 msg = "YOU DRANK ENOUGH WATER, GOOD JOB!";
             }
 
-            Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), msg, Toast.LENGTH_LONG).show();
         }
     }
     }
