@@ -1,10 +1,13 @@
 package com.example.utilities;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -15,7 +18,7 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
-public class MainActivity<auth> extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity {
 
     private EditText etUsername, etPassword;
     private FirebaseAuth auth ;
@@ -34,8 +37,8 @@ public class MainActivity<auth> extends AppCompatActivity {
 
         // TODO: 1- Get data from screen
 
-        String username = etUsername.getText().toString();
-        String password = etPassword.getText().toString();
+       String username = etUsername.getText().toString();
+       String password = etPassword.getText().toString();
         auth = FirebaseAuth.getInstance();
 
         // TODO: 2- Data validation
@@ -51,7 +54,8 @@ public class MainActivity<auth> extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            // TODO: commands if successful
+                            Log.d(TAG, "Succesfully logged in!");
+                            gotoaddhealthstatus(null);
                         } else {
 
 
@@ -61,6 +65,7 @@ public class MainActivity<auth> extends AppCompatActivity {
                     }
                 });
     }
+
 
     public void signup(View view) {
         Intent i = new Intent(this,SignupActivity.class);

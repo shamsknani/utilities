@@ -2,10 +2,14 @@
 
 package com.example.utilities;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -40,15 +44,62 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-
 public class SignupActivity extends AppCompatActivity {
     private EditText etUsername, etPassword, etConfirmPassword;
-    private FirebaseAuth auth;
+    private Utilities utils;
+    private FirebaseServices fbs;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_signup);
 
-    private String email;
-    private String password;
+        connectComponents();
+    }
+
+    private void connectComponents() {
+        etUsername = findViewById(R.id.etusernameSignup);
+        etPassword = findViewById(R.id.etPasswordSignup);
+        utils = Utilities.getInstance();
+        fbs = FirebaseServices.getInstance();
+    }
+
+    public void signup(View view) {
+
+        String username = etUsername.getText().toString();
+        String password = etPassword.getText().toString();
+
+        /*
+        if (username.trim().isEmpty() || password.trim().isEmpty())
+        {
+            Toast.makeText(this, "Some fields are empty!", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        if (!utils.validateEmail(username) || !utils.validatePassword(password))
+        {
+            Toast.makeText(this, "Incorrect email or password!", Toast.LENGTH_SHORT).show();
+            return;
+        } */
 
 
+        fbs.getAuth().createUserWithEmailAndPassword(username, password)
+                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if (task.isSuccessful()) {
+                            Intent i = new Intent(SignupActivity.this, AddHealthStatus.class);
+                            startActivity(i);
+                        } else {
+                            int i;
+                            Log.e(TAG, fbs.getAuth().getCurrentUser().getEmail());
+                            // TODO: what to do if fails
+                        }
+                    }
+                });
+    }
+
+
+/*
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,6 +108,7 @@ public class SignupActivity extends AppCompatActivity {
         etUsername = findViewById(R.id.etusernameSignup);
         etPassword = findViewById(R.id.etPasswordSignup);
         etConfirmPassword = findViewById(R.id.etconfirmPasswordSignup);
+        fbs = FirebaseServices.getInstance();
     }
 
     public void signup(View view) {
@@ -79,23 +131,30 @@ public class SignupActivity extends AppCompatActivity {
 
 
         // TODO: 3- Check username and password with Firebase Authentication
-        auth.createUserWithEmailAndPassword(username, password)
-                .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if (task.isSuccessful()) {
-                            //
-                            // TODO: new User object, add to firebase
-                        } else {
+        try {
+            fbs.getAuth().createUserWithEmailAndPassword(username, password)
+                    .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
+                        @Override
+                        public void onComplete(@NonNull Task<AuthResult> task) {
+                            if(task.isSuccessful()) {
+                                Intent i = new Intent(SignupActivity.this, AddHealthStatus.class);
+                                startActivity(i);
+                                // TODO: new User object, add to firebase
+                            } else {
+
+                                Toast.makeText(SignupActivity.this, "Username or password is empty!", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
 
 
-                            Toast.makeText(SignupActivity.this, "Username or password is empty!", Toast.LENGTH_SHORT).show();
-                            return;
                         }
+                    });
 
-
-                    }
-                });
+        }
+        catch(Exception ex)
+        {
+            Log.e(TAG, ex.getMessage());
+        }
 
         //TODO: verify email format
         //check if email starts with letter or_
@@ -174,5 +233,12 @@ public class SignupActivity extends AppCompatActivity {
         return true;
 
     }
+
+    public void gotoaddhealthstatus(View view) {
+        Intent i = new Intent(this,AddHealthStatus.class);
+        startActivity(i);
+    }
+
+    */
 }
 

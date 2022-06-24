@@ -196,7 +196,10 @@ public class AddHealthStatus extends AppCompatActivity {
                             });
         }
     }
-    public void gotoall(View view) {  Intent i = new Intent(this,AllActivity.class);
+    public void gotoall(View view) {  Intent i = new Intent(this,AllHealthStatuses.class);
+        startActivity(i);
+    }
+    public void gotoall2(View view) {  Intent i = new Intent(this,AllActivity.class);
         startActivity(i);
     }
 }

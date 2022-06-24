@@ -1,8 +1,10 @@
 package com.example.utilities;
 
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,6 +13,8 @@ import android.view.MenuItem;
 import android.view.View;
 
 public class AllActivity extends AppCompatActivity {
+
+    FirebaseServices fbs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,6 +26,7 @@ public class AllActivity extends AppCompatActivity {
         actionBar.setTitle("HealthyHearts");
         actionBar.setDisplayUseLogoEnabled(true);
         actionBar.setDisplayShowHomeEnabled(true);
+        fbs = FirebaseServices.getInstance();
 
     }
 
@@ -55,13 +60,14 @@ public class AllActivity extends AppCompatActivity {
             // User chose the "Settings" item, show the app settings UI...
             //return true;
 
-            case R.id.miProfile:
+            case R.id.misignin:
                 // User chose the "Favorite" action, mark the current item
                 // as a favorite...
+                gotoLogin();
                 return true;
 
-            case R.id.miSettings:
-
+            case R.id.misignout:
+                fbs.getAuth().signOut();
                 return true;
 
             default:
@@ -72,4 +78,9 @@ public class AllActivity extends AppCompatActivity {
         }
 
     }
+
+    private void gotoLogin() {
+
+    }
+
 }

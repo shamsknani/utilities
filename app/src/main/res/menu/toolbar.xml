@@ -3,14 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/miProfile"
+        android:id="@+id/misignin"
         app:showAsAction="never"
-        android:title="signout">
+        android:title="Signin">
 
     </item>
     <item
-        android:id="@+id/miSettings"
+        android:id="@+id/misignout"
         app:showAsAction="never"
-        android:title="Settings">
+        android:title="Signout">
     </item>
 </menu>
